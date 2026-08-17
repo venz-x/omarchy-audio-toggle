@@ -393,13 +393,13 @@ The exact ports available depend on the audio hardware.
 For Hyprland, add a keybinding to your:
 
 ```text
-~/.config/hypr/bindings.conf
+~/.config/hypr/bindings.lua
 ```
 
 For example:
 
 ```ini
-bindd = SUPER SHIFT, A, Toggle audio output, exec, ~/.local/bin/toggle-audio
+o.bind("SUPER + SHIFT + CTRL + L", "Toggle audio output", "~/.local/bin/toggle-audio")
 ```
 
 Then reload Hyprland:
@@ -411,7 +411,7 @@ hyprctl reload
 Now:
 
 ```text
-Super + Shift + A
+SUPER + SHIFT + CTRL + L
 ```
 
 toggles between:
